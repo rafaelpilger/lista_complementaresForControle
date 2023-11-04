@@ -8,11 +8,18 @@
     */
 
     //ENTRADA
+    const altura = parseInt(prompt(`informe a quantidade de pessoas que informarão a sua altura`))
+    let info = []
 
-    
     //PROCESSAMENTO
-    
-    
+    for (let i = 0; i < altura; i++) {
+        const pergunta = Number(prompt(`informe a altura sua altura`).replace(`,`, `.`))
+        info.push(pergunta)
+    }
+    info.sort((a, b) => b - a)
+    document.write(`a maior altura é ${info[0].toFixed(2).replace(`.`, `,`)}`)
+    info.sort((a, b) => a - b)
+    document.write(`a menor altura é ${info[0].toFixed(2).replace(`.`, `,`)}`)
     //SAÍDA
     
 

@@ -10,17 +10,36 @@
     - Percentual de homens que responderam não entre todos os homens analisados
     */
 
-    //ENTRADA
-
-
-    //PROCESSAMENTO
-    //ENTRADA
-
-    
-    //PROCESSAMENTO
-    
-    
     //SAÍDA
-    
+    let Feminino = []
+    let Masculino = []
+    let MN = []
+    let FN = []
+
+    //PROCESSAMENTO
+    for (let num = 0; num < 10; num++) {
+        const genero = prompt(`informe seu genero M-masculino F-feminino`).toUpperCase()
+        const resp = prompt(`O produto atendeu as suas espectativas? S-sim N-não`).toUpperCase()
+
+        if (genero == `M` && resp == `S`) {
+            Masculino.push(resp)
+        }
+        else if (genero == `M` && resp == `N`) {
+            MN.push(resp)
+        }
+        else if (genero == `F` && resp == `S`) {
+            Feminino.push(resp)
+        }
+        else if (genero == `F` && resp == `N`) {
+            FN.push(resp)
+        }
+        else {
+            alert(`responda certo!!! `)
+        }
+
+    }
+
+    //SAÍDA
+    document.write(`<h3>O numero de pessoas que respondeu S foi ${Feminino.length + Masculino.length} <br>A quantidade de pessoas que responderam N foram ${MN.length + FN.length} <br>O numero de mulheres que responderam S foi ${Feminino.length} <br>O percentual dos homens que responderam N dentre todos os homens analisados foram ${((MN.length / (Masculino.length + MN.length)) * 100).toFixed(0)}%`)
 
 </script>

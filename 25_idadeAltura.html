@@ -10,11 +10,41 @@
 
     //ENTRADA
 
-    
+    let mais50 = []
+    let menos25 = []
+    let M50 = 0
+    let M25 = 0
+    let media = 0
+
     //PROCESSAMENTO
-    
-    
+    for (let num = 0; num < 10; num++) {
+        const peso = Number(prompt(`Informe o seu peso atual`))
+        const idade = parseInt(prompt(`Informe  sua idade`))
+
+        if (idade > 50) {
+            mais50.push(peso);
+            M50 = M50 + peso
+            media = media + peso
+        }
+        else if (idade <= 25) {
+            menos25.push(peso)
+            mais50 = mais50 + peso
+            media = media + peso
+        }
+        else {
+            alert(`Informe só numeros`)
+        }
+    }
+
+    M50 = M50 / mais50.length
+    M25 = M25 / menos25.length
+    media = media / (mais50.length + menos25.length)
+
     //SAÍDA
-    
+    document.write(`<h3>A média dos pesos das pessoas que possuem mais de 50 anos é ${M50}<br> A média dos pesos das pessoas que possuem menos de 25 anos é ${M25} e a média dos pesos de todas as pessoas são ${media} `)
+
+
+
+
 
 </script>

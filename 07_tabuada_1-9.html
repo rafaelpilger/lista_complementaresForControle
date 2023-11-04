@@ -5,9 +5,17 @@
     */
 
     //ENTRADA
+    let tabuada = ["1","2","3","4","5","6","7","8","9"];
 
-    
+    const num =  Number(prompt(`Qual número vc deseja saber na tabuada?`));
+
     //PROCESSAMENTO
+    for(let ada of tabuada){
+        const conta = ada*num
+        document.write(`${ada} X ${num} = ${conta} <br>`)
+    }
+
+
     
     
     //SAÍDA

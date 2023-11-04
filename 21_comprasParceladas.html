@@ -11,12 +11,30 @@
     */
 
     //ENTRADA
+    let valor = 0
+    let V = []
+    let P = []
 
-    
+
     //PROCESSAMENTO
-    
-    
+    for (let num = 0; num < 2; num++) {
+        const Final = Number(prompt(`Qual foi o valor do produto?`))
+        const pagas = prompt(`Como ele foi pago V= Avista e P=Parcelado`).trim().toUpperCase();
+
+        if (pagas == "P") {
+            P.push(Final)
+            valor = valor / 3
+        }
+        else if (pagas == "V") {
+            V.push(Final)
+        }
+        else {
+            alert(`Insira corretamente!!`)
+        }
+    }
+
+
     //SAÍDA
-    
+    document.write(`<h3>O total das compras a vista foram de: ${V.length}<br> O valor total de compras Parceladas doram de: ${P.length}<br> O total de compras efetuadas foram de  ${V.length + P.length}<br> E o valor da primeira pretaçao das compras a prazo é ${valor.toFixed(2)} `)
 
 </script>

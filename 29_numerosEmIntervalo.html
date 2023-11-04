@@ -7,8 +7,17 @@
 
     //ENTRADA
 
+    let num =[]
     
     //PROCESSAMENTO
+    for(let numero =0; numero < 10; numero++){
+        const INFO = Number(prompt(`informe um numero`))
+
+        if(INFO >= 100 && INFO <= 200){
+            num.push(INFO)
+        }
+    }
+    document.write(`<h3> Há ${(num.length/ 10) * 100}% de numeros que estão entre 100 e 200<br> E a quantidade de numeros que estão entre 100 e 200 é ${num.length}.`)
     
     
     //SAÍDA

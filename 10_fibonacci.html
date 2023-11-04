@@ -8,11 +8,17 @@
     */
 
     //ENTRADA
+    let fibonacci = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+    let numeros = Number(prompt(`Informe a quantidadade de numeros que deseja adicionar na lista fibonacci!`));
 
     
     //PROCESSAMENTO
+    for(let num = 0; num < numeros; num++){
+        const conta = fibonacci[fibonacci.length - 1] + fibonacci[ fibonacci.length - 2]
+        fibonacci.push(conta)
+    }
     
-    
+    document.write(`Essa é a lista com a numeros adicionados ${fibonacci[0]}`)
     //SAÍDA
     
 

@@ -9,12 +9,40 @@
     */
 
     //ENTRADA
+  let idade = 0;
+  let mulher= 0;
+  let homens = 0;
 
-    
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
+  //PROCESSAMENTO
+  for (let num = 1; num <= 10; num++) {
+    const sexo = prompt(`Qual o seu sexo ? M-Masculino F-Feminino`).toUpperCase();
+    const idade = Number(prompt(`Digite sua idade ${num}:`));
 
+    if (isNaN(idade)) {
+      alert("Idade inválida. Por favor, digite um número.");
+      
+    } else {
+      idade += idade;
+
+      if (sexo === 'F') {
+        mulher+= idade;
+
+      } else if (sexo === 'M') {
+        homens += idade;
+
+      } else {
+        alert("Digite apenas (F ou M)");
+        
+      }
+    }
+  }
+
+  let mediaIdades = idade / 10;
+  let mediaMulheres = mulher/ (mulher > 0 ? mulher: 1);
+  let mediaHomens = homens / (homens > 0 ? homens : 1);
+
+  //SAÍDA
+  document.write(`<h3>Média das idades das 10 pessoas: ${mediaIdades.toFixed(2)} anos<br>
+Idade média das mulheres: ${mediaMulheres.toFixed(2)} anos<br>
+Idade média dos homens: ${mediaHomens.toFixed(2)} anos<br>`);
 </script>

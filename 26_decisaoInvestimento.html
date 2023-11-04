@@ -9,10 +9,26 @@
     */
 
     //ENTRADA
+    let valor = Number(prompt(`Informe o valor que desejas investir.`))
 
     
     //PROCESSAMENTO
-    
+    for(let num = 0; num < 36; num++){
+        valor = valor * 1.015
+
+    }
+    document.write(`Poupança: R$${valor.toFixed(2).replace(".",",")}<br>`);
+
+    for(let num = 0; num < 35; num++){
+        valor= valor *  1.02
+
+    }
+    document.write(`poupança plus: R$ ${valor.toFixed(2).replace(`.`, `,`)}<br>`)
+     
+    for (let num = 0; num < 36; num++) {
+        valor = valor * 1.04
+    }
+    document.write(`fundos de renda fixa: R$ ${valor.toFixed(2).replace(`.`, `,`)}`)
     
     //SAÍDA
     

@@ -12,9 +12,27 @@
     */
 
     //ENTRADA
-
+    let salarios = [1200, 2500, 3000, 9000, 850, 4000, 1500, 2300, 3800, 1600];
+    salarios.sort((a,b) => b-a)
+    let numeroDeFilhos = [1, 2, 2, 1, 3, 2, 3, 3, 0, 4];
+    const maiorS= salarios[0]
+    let mediaS =0
+    let mediaF=0
+    let maiores =[]
     
     //PROCESSAMENTO
+    for(let i=0; i<salarios.length;i++){
+         mediaS = mediaS + salarios[i] / 10
+         mediaF = mediaF + numeroDeFilhos[i] / 10
+
+        if(salarios[i] >= 3000){
+            maiores.push(salarios[i])
+
+        }
+    }
+    document.write(`<h3>A média do salario é R$ ${mediaS} <br>A média do numero de filhos é de ${mediaF.toFixed(0)} <br>O maior salario é R$ ${maiorS} <br>O percentual das familia com salario maior que R$ 3000 é ${(maiores.length / salarios.length) * 100}%`)
+    //SAÍDA
+    
     
     
     //SAÍDA

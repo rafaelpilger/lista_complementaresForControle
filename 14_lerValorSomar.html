@@ -7,10 +7,17 @@
     */
 
     //ENTRADA
-
-    
+    const num= Number(prompt(`informe um numero inteiro e positivo`))
+    let soma = 0
+    let final = ""
     //PROCESSAMENTO
-    
+    for (let numero = 1; numero <= num; numero++) {
+        soma = soma + 1/numero
+        final = `1/${numero}`
+        alert(final)  
+    }
+     document.write(`<h4>O valor final foi ${soma.toFixed(3)}`)
+    //SAÍDA
     
     //SAÍDA
     

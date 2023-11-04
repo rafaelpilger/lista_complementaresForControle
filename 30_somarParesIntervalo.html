@@ -3,6 +3,7 @@
     /*
     Desenvolva um programa que pergunte ao usuário o limite inferior e o limite superior.
     Imprima todos os números pares que estão neste intervalo e calcule a soma desses números.
+
     Por exemplo:
     - Limite inferior: 3
     - Limite superior: 12
@@ -11,12 +12,22 @@
     */
 
     //ENTRADA
+    let inferior = Number(prompt(`Digite um número para ser o limite inferior!`));
+    let superior = Number(prompt(`Digite um número para ser o limite superior!`));
+    let soma = 0
+    let pares = []
 
-    
     //PROCESSAMENTO
+    for(let num = inferior; num <= superior; num++){
+        if(num % 2 === 0){
+            pares.push(num)
+            soma = soma + num
+        }
+    }
+    
     
     
     //SAÍDA
-    
+    document.write(`<h3> Os numeros pares são:  ${pares}<br> E a soma deles é ${soma}`)
 
 </script>

@@ -7,12 +7,17 @@
     */
 
     //ENTRADA
+    const num= Number(prompt(`Digite um numero inteiro positivo`));
+    let fato = 1
 
-    
     //PROCESSAMENTO
     
-    
-    //SAÍDA
+    if(num > 0 && Number.isInteger(num)){
+        for(let numero=1; numero<=num;numero++){
+            fato = fato * numero
+        }
+    }
+    document.write(fato)
     
 
 </script>

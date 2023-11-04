@@ -14,12 +14,41 @@
     */
 
     //ENTRADA
+    let Até15 = []
+    let D16a30 = []
+    let D31a45 = []
+    let D46a60 = []
+    let Acima61 = []
+
+    //PROCESSAMENTO
+
+    for (let num = 0; num < 10; num++) {
+        const gunta = Number(prompt(`Informe a idade de 10 pessoas`))
+
+        if (gunta <= 15) {
+            Até15.push(gunta)
+        }
+        else if (gunta >= 16 && gunta <= 30) {
+            D16a30.push(gunta)
+        }
+        else if (gunta >= 46 && gunta <= 60) {
+            D46a60.push(gunta)
+        }
+        else if (gunta >= 60) {
+            Acima61.push(gunta)
+        }
+        else {
+            alert(`Digite apenas numeros.`);
+        }
+
+    }
+
+    //SAÍDA
+    document.write(`<h3>A quantidade de pessoas de até 15 anos é ${Até15.length}</br> A quantidade de pessoas de 16 a 30 anos é ${D16a30.length}</br> A quantiade de pessoas de 31 a 45 anos é ${D31a45.length}</br> A quantidade de pesosas de 46 a 60 anos ${D46a60.length}</br> a quantidade de pessoas com idade maior que 61 é ${Acima61.length} <hr>`)
 
     
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
+    document.write(`<h3>As pessoas que possuem abixo 15 anos: ${(Até15.length / 10) * 100}% </br> As pessoas que possuem de 16 a 30 anos: ${(D16a30.length / 10) * 100}% </br> As pessoas que possuem de 31 a 45 anos: ${(D31a45.length / 10) * 100}%</br> As pessoas que possuem de 46 a 60 anos: ${(D46a60.length / 10) * 100}% </br>As pessoas que possuem uma idade acima de 61 anos:${(Acima61.length / 10) * 100}% `)
+
+
 
 </script>

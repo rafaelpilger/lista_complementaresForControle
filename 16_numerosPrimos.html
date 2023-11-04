@@ -8,11 +8,26 @@
     */
 
     //ENTRADA
-
+const desc= Number(prompt(`quantos numeros primos deseja descobrir`))
+let primos=[];
     
     //PROCESSAMENTO
     
-    
+    for(let i= 0; i<desc; i++){
+        const num = Number(prompt(`informe um numero`))
+        for(let pri = 2; pri < num; pri++){
+            if(num % pri === 0){
+                alert(`esse numero não é primo`)
+                break;
+            }
+            else{
+                alert(`esse numero é primo`)
+                primos.push(num)
+                break;
+            }
+        }
+    }
+    alert(primos)
     //SAÍDA
     
 

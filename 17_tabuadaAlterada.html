@@ -14,11 +14,23 @@
 
     //ENTRADA
 
+    const num= Number(prompt('Qual tabuada vc deseja saber?'));
+    const inicio = Number(prompt(`Informe um numero para iniciar a tabuada do ${num}?`));
+    const final = Number(prompt('informe onde a conta vai acabar '));
     
     //PROCESSAMENTO
-    
-    
-    //SAÍDA
+    if(final > inicio){
+    for(let numero = inicio; numero <= final; numero++){
+        const multi = num*numero
+        document.write(`<h5>${num} x ${numero}  = ${multi}<br><hr>`)
+    }
+}
+else{
+    alert(`O final deve ser maior que inicio!`);
+} 
+
+
+
     
 
 </script>

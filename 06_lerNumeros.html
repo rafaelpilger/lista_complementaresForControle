@@ -3,17 +3,31 @@
     /*
     Desenvolva um programa que leia a seguinte lista de números:
     let listaDeNumeros = [4, 8, 12, 35, 78, 83, 5, 22, 49, 95];
+
     Separe e apresente os números em duas listas, com os números abaixo de 50 e os números acima de 50.
     Apresente também o percentual de números abaixo de 50 e o percentual de números acima de 50.
     */
 
     //ENTRADA
+    let listaDeNumeros = [4, 8, 12, 35, 78, 83, 5, 22, 49, 95];
+    let abaixo = []
+    let acima = []
 
-    
     //PROCESSAMENTO
+    for(let lista of listaDeNumeros){
+       if(lista <= 50){
+        abaixo.push(lista)
+       }
+       else if(lista > 50){
+      acima.push(lista)
+    }
+}
     
     
     //SAÍDA
+    document.write(`Essa é a lista de números: [4, 8, 12, 35, 78, 83, 5, 22, 49, 95] <br>`)
+    document.write(`Os numeros acima de 50 são ${acima} o equivalente a ${(acima.length / listaDeNumeros.length) * 100}% <br>`)  
+    document.write(`Os numeros abaixo de 50 são ${abaixo}  o equivalente a ${(abaixo.length / listaDeNumeros.length) * 100}%`)
     
 
 </script>

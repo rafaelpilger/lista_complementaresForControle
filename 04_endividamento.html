@@ -7,12 +7,19 @@
     */
 
     //ENTRADA
+   
+     
+    
+    //PROCESSAMENTO[
 
-    
+    let mes = 0
     //PROCESSAMENTO
-    
+    for (let investido = 10000; investido > 0; investido *= 1.03) {
+        investido = investido - 300
+        mes++
+    }
     
     //SAÍDA
-    
+    document.write(`<h3>O ser humano tera gasto todo o seu dinheiro investido em ${mes} meses`)
 
 </script>

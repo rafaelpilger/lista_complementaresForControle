@@ -11,12 +11,47 @@
     */
 
     //ENTRADA
+    const pessoas = Number(prompt(`informe quantas pessoas assistiram ao filme!`))
+    
+    let regular= []
+    let bom = []
+    let mediaB = 0
+    let mediaR = 0
+    let media = 0
+    let perceB = 0
+    let PerceR = 0
 
     
-    //PROCESSAMENTO
     
+    //PROCESSAMENTO
+    for (let num = 0; num < pessoas; num++){
+        const idade = Number(prompt(`Insira a sua idade!`))
+        const avaliação = prompt(`Qual é a sua avaliaçao sobre o filme R=Regular, B=Bom`).trim().toUpperCase();
+
+        if(avaliação == `R`){
+            regular.push(idade)
+            mediaR =mediaR + idade
+            media = media + idade
+        }
+        else if(avaliação == "B"){
+            bom.push(idade)
+            mediaB = mediaB + idade
+            media = media + idade
+        }
+        else{
+            alert (`Digite apenas B ou R !`);
+        }
+    }
     
     //SAÍDA
+    mediaB= mediaB / bom.length
+    mediaR = mediaR / regular.length
+    media = media / (bom.length + regular.length)
+    
+    document.write(`<h3>A idade média das pessoas que avaliaram (B-bom) foi ${mediaB.toFixed(0)} anos<br> A idade media das pessoas que avaliaram (R-regular) foi ${mediaR.toFixed(0)}<br> Na média da idade das pessoas foi ${media} \no percentual das pessoas que avaliaram (B-BOM) foi ${(bom.length / pessoas) * 100}%<br> No percentual das pessoas que avaliaram (R-regular) foi ${(regular.length / pessoas) * 100}% `)
+
+    
+
     
 
 </script>

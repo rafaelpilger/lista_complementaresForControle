@@ -8,11 +8,38 @@
 
     //ENTRADA
 
-    
+    let massa = Number(prompt('informe sua massa inicial'))
+    let minutos = 0
+    let horas = 0
+    let massaFinal = []
+
     //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
+    if (massa > 1) {
+        for (let i = 0; massa > 1; i++) {
+            massa = massa / 2
+            minutos++
+            if (minutos >= 60) {
+                horas++
+                minutos = minutos - 60
+            }
+            massaFinal.push(massa)
+        }
+    }
+    else {
+        alert(`insira uma massa maior que 1`)
+    }
+    if (horas >= 1) {
+        document.write(`<h3>A masssa inicial do material radioativo foi de ${massaFinal[0] * 2} <br> E a massa final foi de ${massa.toFixed(2)}<br>  e são necessarios ${horas} horas e ${minutos} minutos `);
+    }
+    else {
+        document.write(`<h3>A masssa inicial do material radioativo foi de ${massaFinal[0] * 2}<br>  E a massa final foi de ${massa.toFixed(2)}<br>  e são necessarios ${minutos}  minutos`)
+    }
+
+
+
+
+
+
+
 
 </script>

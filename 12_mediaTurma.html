@@ -8,10 +8,22 @@
     */
 
     //ENTRADA
+    let notasProgramacaoI = [4, 3, 5, 10, 9, 2, 7, 10, 8, 7, 6, 1, 5, 2, 3];
+    notasProgramacaoI.sort((a,b) => a-b)
 
+    const inicial = notasProgramacaoI[0]
+    notasProgramacaoI.sort((a,b) => b-a)
+
+    const maior = notasProgramacaoI[0]
+    let media =0
     
     //PROCESSAMENTO
-    
+    for(let i =0; i<notasProgramacaoI.length;i++){
+        media += notasProgramacaoI[i] / 15
+    }
+    document.write(inicial)
+    document.write(maior)
+    document.write(media.toFixed(2))
     
     //SAÍDA
     

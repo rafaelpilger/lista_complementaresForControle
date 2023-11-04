@@ -9,10 +9,26 @@
     */
 
     //ENTRADA
+    const filme = Number(prompt("Fabio, quantos filmes deseja cadastrar ?"));
 
-    
     //PROCESSAMENTO
-    
+    for(let filmes = 1; filmes <= filme; filmes ++){
+        const nome = prompt(`Digite o nome do filme que desejas cadastrar!`).trim().toLowerCase();
+        const fil = prompt(`Escolha um dos três tipos de filme:Comédia:(C), Drama:(D) e Romance:(R).`).trim().toUpperCase();
+
+        if(fil == "C"){
+            document.write(`Os filmes, (${nome}) são de Comédia (C). <br>`);
+        }
+        else if (fil == "D") {
+            document.write(`Os filmes, (${nome}) são de Drama(D) <br>`);
+        }
+        else if (fil == "R") {
+            document.write(`Os filmes,(${nome}) são de Romance(R) <br>`);
+        }
+        else{
+            alert("Você esqueceu de colocar a clacificaçao do filme: Comédia:(C), Drama:(D) e Romance:(R). ")
+        }
+    }
     
     //SAÍDA
     

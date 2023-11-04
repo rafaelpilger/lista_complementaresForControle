@@ -15,11 +15,45 @@
     */
 
     //ENTRADA
-
+    let item = ["Tomate", "Batata","Batata-Doce", "Alface", "Cebola", "Cebolinha", "Beterraba"]
+    let Tomate =  0
+     let Batata =  0
+     let BatataDoce = 0 
+     let Alface =  0 
+     let Cebola =  0 
+    let Cebolinha =  0
+    let Beterraba =  0
     
+   
     //PROCESSAMENTO
+       for (let produto = 0; produto < item.length; produto++) {
+        const conta = Number(prompt(`qual a quantidade de ${item[produto]} foi vendido?`));
     
-    
+        if(item[produto].includes(`Tomate`)){
+            Tomate = 3.90*conta
+        }
+        else if (item[produto].includes('Batata')){
+            Batata = 3.40*conta
+        }
+        else if(item[produto].includes(`Batata-Doce`)){
+            BatataDoce = 4.70*conta
+        }
+        else if(item[produto].includes(`Alface`)){
+           Alface = 1.50*conta
+        }
+        else if(item[produto].includes(`Cebola`)){
+            Cebola = 2.90*conta
+        }
+        else if(item[produto].includes(`Cebolinha`)){
+            Cebolinha = 1.40*conta
+        }
+        else if (item[produto].includes(`Beterraba`)){
+            Beterraba = 4.10*conta
+        }
+    }
     //SAÍDA
+
+     let faturamento = Tomate+Batata+BatataDoce+Alface+Cebola+Cebolinha+Beterraba
+     document.write(`O faturamento da feira foi de: R$ ${faturamento.toFixed(2).replace(`.`,`,`)}`);
     
 </script>

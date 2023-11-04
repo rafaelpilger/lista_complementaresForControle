@@ -6,12 +6,18 @@
     */
 
     //ENTRADA
+    let maior = [ ];
 
     
     //PROCESSAMENTO
+    for(let num = 1000; maior.length <= 5; num ++){
+        if(num % 11 == 5){
+            maior.push(num)
+        }
+    }
     
     
     //SAÍDA
-    
+    document.write(`<h1>Oquinto maior número divissivel por 11 que tenha o resto 5 é ${(maior[4])}`)
 
 </script>
